@@ -44,11 +44,11 @@ diceBtn.addEventListener('click', () => {
 
 function checkWinner(playerRandNum, computerRandNum) {
     if (playerRandNum > computerRandNum) {
-        winnerText.innerText = '🎉 Player Win 🎉';
-        console.log('player win')
+        winnerText.innerText = '🎉 Player Wins 🎉';
+        console.log('player wins')
     } else if (playerRandNum < computerRandNum) {
-        winnerText.innerText = '😢 Computer Win 😢';
-        console.log('computer win')
+        winnerText.innerText = '😢 You Lose 😢';
+        console.log('computer wins')
     } else {
         winnerText.innerText = '😐 Draw 😐';
         console.log('draw')
