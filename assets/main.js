@@ -2,7 +2,7 @@ const form = document.querySelector('form');
 const inputEmail = document.querySelector('#email');
 const emailHelp = document.querySelector('#emailHelp');
 const authUsers = ['ri@chi.com', 'richi@123.it'];
-let isAuthUser = false;
+let isAuthUser;
 
 form.addEventListener('submit', (e) => {
     e.preventDefault();
