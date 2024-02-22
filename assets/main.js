@@ -11,7 +11,9 @@ form.addEventListener('submit', (e) => {
     for (let i = 0; i < authUsers.length; i++) {
         if (userEmail === authUsers[i]) {
             isAuthUser = true; 
-        } 
+        } else {
+            isAuthUser = false; 
+        }
     }
 
     if (isAuthUser) {
