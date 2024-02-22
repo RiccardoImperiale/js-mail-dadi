@@ -2,19 +2,13 @@ const form = document.querySelector('form');
 const inputEmail = document.querySelector('#email');
 const emailHelp = document.querySelector('#emailHelp');
 const authUsers = ['ri@chi.com', 'richi@123.it'];
-let isAuthUser;
 
 form.addEventListener('submit', (e) => {
     e.preventDefault();
+    let isAuthUser = false;
     const userEmail = inputEmail.value;
     // check if user email is already present in the list of who can access
-    for (let i = 0; i < authUsers.length; i++) {
-        if (userEmail === authUsers[i]) {
-            isAuthUser = true; 
-        } else {
-            isAuthUser = false; 
-        }
-    }
+    authUsers.includes(userEmail) ? isAuthUser = true : isAuthUser = false;
 
     if (isAuthUser) {
         emailHelp.innerText = 'You are an authorized user';
