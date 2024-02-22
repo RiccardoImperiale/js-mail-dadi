@@ -13,10 +13,8 @@
 </head>
 
 <body class="bg-primary vh-100 vw-100 d-flex align-items-center justify-content-center flex-column">
-    
     <div class="container">
         <h1 class="text-center mb-4 text-white">Mailing List</h1>
-
         <form class="bg-white rounded p-5 w-75 m-auto">
             <div class="mb-3">
                 <label for="email" class="form-label">Email address</label>
@@ -29,18 +27,18 @@
     <!-- Dice game -->
     <div class="container mt-5">
         <h1 class="text-center mb-4 text-white">Dice Game</h1>
-        <div class="bg-white rounded p-5 w-50 m-auto text-center">
-            <div class="mb-3 d-flex flex-column">
+        <div style="height: 350px;" class="bg-white rounded w-50 m-auto text-center d-flex justify-content-center align-items-center">
+            <div id="gif" class="rounded m-auto d-flex overflow-hidden justify-content-center d-none">
+                <img height="250px" src="" alt="gif">
+            </div>
+            <div id="diceContainer" class="d-flex flex-column">
                 <h4>Computer vs Player</h4>
-                <div id="gif" class=" m-auto d-flex justify-content-center d-none">
-                    <img width="260px" src="./assets/img/will-ferrell-amy-poehler.gif" alt="gif">
-                </div>
-                <div id="diceContainer" class="d-flex m-auto flex-wrap justify-content-center">
+                <div class="d-flex m-auto flex-wrap justify-content-center my-2">
                     <i id="diceComputer" style="font-size: 8rem;" class="fa-solid fa-dice-one mx-2"></i>
                     <i id="dicePlayer" style="font-size: 8rem;" class="fa-solid fa-dice-one mx-2"></i>
                 </div>
+                <button id="diceBtn" type="button" class="btn btn-primary mt-4 w-50 m-auto">Roll the Dices</button>
             </div>
-            <button id="diceBtn" type="button" class="btn btn-primary">Roll the Dices</button>
         </div>
     </div>
 

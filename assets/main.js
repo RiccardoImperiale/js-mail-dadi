@@ -28,10 +28,12 @@ const dicePlayer = document.querySelector('#dicePlayer')
 const winnerText = document.querySelector('h4')
 const diceClassDefault = 'fa-solid mx-2';
 const gif = document.querySelector('#gif');
+const img = document.querySelector('img');
 const diceContainer = document.querySelector('#diceContainer');
+const gifs = ["./assets/img/rolldice-1.gif", "./assets/img/rolldice-2.gif", "./assets/img/rolldice-3.gif"];
 
 diceBtn.addEventListener('click', () => {
-    showGif();
+    showRandomGif();
     const computerRandNum = Math.floor(Math.random() * 6) + 1;
     const playerRandNum = Math.floor(Math.random() * 6) + 1;
 
@@ -95,7 +97,11 @@ function rollPlayerDice(playerRandNum) {
     }
 }
 
-function showGif() {
+function showRandomGif() {
+    // random gif
+    const gifRandNum = Math.floor(Math.random() * gifs.length);
+    img.src = gifs[gifRandNum]
+
     gif.classList.remove('d-none')
     diceContainer.classList.add('d-none')
     winnerText.classList.add('d-none')
