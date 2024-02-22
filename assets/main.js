@@ -27,8 +27,11 @@ const diceComputer = document.querySelector('#diceComputer')
 const dicePlayer = document.querySelector('#dicePlayer')
 const winnerText = document.querySelector('h4')
 const diceClassDefault = 'fa-solid mx-2';
+const gif = document.querySelector('#gif');
+const diceContainer = document.querySelector('#diceContainer');
 
 diceBtn.addEventListener('click', () => {
+    showGif();
     const computerRandNum = Math.floor(Math.random() * 6) + 1;
     const playerRandNum = Math.floor(Math.random() * 6) + 1;
 
@@ -90,4 +93,15 @@ function rollPlayerDice(playerRandNum) {
         dicePlayer.classList = diceClassDefault;
         dicePlayer.classList.add('fa-dice-six')
     }
+}
+
+function showGif() {
+    gif.classList.remove('d-none')
+    diceContainer.classList.add('d-none')
+    winnerText.classList.add('d-none')
+    setTimeout(function () {
+        gif.classList.add('d-none')
+        diceContainer.classList.remove('d-none')
+        winnerText.classList.remove('d-none')
+    }, 1200);
 }

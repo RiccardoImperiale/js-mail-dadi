@@ -13,7 +13,7 @@
 </head>
 
 <body class="bg-primary vh-100 vw-100 d-flex align-items-center justify-content-center flex-column">
-
+    
     <div class="container">
         <h1 class="text-center mb-4 text-white">Mailing List</h1>
 
@@ -29,11 +29,13 @@
     <!-- Dice game -->
     <div class="container mt-5">
         <h1 class="text-center mb-4 text-white">Dice Game</h1>
-
         <div class="bg-white rounded p-5 w-50 m-auto text-center">
             <div class="mb-3 d-flex flex-column">
                 <h4>Computer vs Player</h4>
-                <div class="d-flex m-auto flex-wrap justify-content-center">
+                <div id="gif" class=" m-auto d-flex justify-content-center d-none">
+                    <img width="260px" src="./assets/img/will-ferrell-amy-poehler.gif" alt="gif">
+                </div>
+                <div id="diceContainer" class="d-flex m-auto flex-wrap justify-content-center">
                     <i id="diceComputer" style="font-size: 8rem;" class="fa-solid fa-dice-one mx-2"></i>
                     <i id="dicePlayer" style="font-size: 8rem;" class="fa-solid fa-dice-one mx-2"></i>
                 </div>
