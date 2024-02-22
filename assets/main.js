@@ -7,7 +7,7 @@ let isAuthUser;
 form.addEventListener('submit', (e) => {
     e.preventDefault();
     const userEmail = inputEmail.value;
-    // check if user email is already present in the list of who can access
+    // check if user email is already in the list
     authUsers.includes(userEmail) ? isAuthUser = true : isAuthUser = false;
 
     if (isAuthUser) {
