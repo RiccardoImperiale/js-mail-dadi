@@ -7,12 +7,15 @@
     <title>Mail</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 
-<body class="bg-primary vh-100 vw-100 d-flex align-items-center justify-content-center">
+<body class="bg-primary vh-100 vw-100 d-flex align-items-center justify-content-center flex-column">
 
     <div class="container">
-        <h1 class="text-center mb-5 text-white">Mailing List</h1>
+        <h1 class="text-center mb-4 text-white">Mailing List</h1>
 
         <form class="bg-white rounded p-5 w-75 m-auto">
             <div class="mb-3">
@@ -22,6 +25,21 @@
             </div>
             <button type="submit" class="btn btn-primary">Submit</button>
         </form>
+    </div>
+    <!-- Dice game -->
+    <div class="container mt-5">
+        <h1 class="text-center mb-4 text-white">Dice Game</h1>
+
+        <div class="bg-white rounded p-5 w-50 m-auto text-center">
+            <div class="mb-3 d-flex flex-column">
+                <h4>Computer vs Player</h4>
+                <div class="d-flex m-auto flex-wrap justify-content-center">
+                    <i id="diceComputer" style="font-size: 8rem;" class="fa-solid fa-dice-one mx-2"></i>
+                    <i id="dicePlayer" style="font-size: 8rem;" class="fa-solid fa-dice-one mx-2"></i>
+                </div>
+            </div>
+            <button id="diceBtn" type="button" class="btn btn-primary">Roll the Dices</button>
+        </div>
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
