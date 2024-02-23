@@ -1,12 +1,11 @@
 const form = document.querySelector('form');
-const inputEmail = document.querySelector('#email');
 const emailHelp = document.querySelector('#emailHelp');
-const authUsers = ['ri@chi.com', 'richi@123.it'];
+const authUsers = ['ri@chi.com', 'richi@123.it',];
 let isAuthUser;
 
 form.addEventListener('submit', (e) => {
     e.preventDefault();
-    const userEmail = inputEmail.value;
+    const userEmail = e.target.email.value;
     // check if user email is already in the list
     authUsers.includes(userEmail) ? isAuthUser = true : isAuthUser = false;
 
